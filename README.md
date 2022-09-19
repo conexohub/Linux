@@ -1,0 +1,2 @@
+# Linux
+Dicas de configuração
