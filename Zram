@@ -1,0 +1,21 @@
+Zram
+
+##
+
+ZRam é um módulo do kernel que tem um melhor gerenciamento de memória comparado ao swap, após ativado, ele cria um dispositivo de blocos na memória RAM que funcionam como swap,mas os dados são comprimidos na memória do sistema,assim sendo muito mais rápido.
+
+Pamac
+
+pamac install systemd-swap
+Configurando #
+Para ativar use o comando no terminal
+
+sudo nano /usr/share/systemd-swap/swap-default.conf
+Em ZRam altere a linha zram_enabled=0 para zram_enabled=1 salve e saia para ativar.
+
+Agora inicie o systemd-swap e já adicona o mesmo para iniciar com o sistema.
+
+sudo systemctl enable --now systemd-swap
+Se você utilizou o comando acima, você já pode verificar como ficou a sua zram.
+
+cat /proc/swaps
