@@ -1,0 +1,245 @@
+Este guia explica como exibir informações do sistema Linux usandoneofetch. O Neofetch é um utilitário de informações do sistema de linha de comando de código aberto e multiplataforma escrito emTentar. Ele reúne informações sobre o software e hardware do seu sistema e exibe o resultado no Terminal.
+
+Por padrão, as informações do sistema serão exibidas junto com o logotipo do seu sistema operacional. No entanto, você pode personalizá-lo ainda mais para usar umimagem asciiou qualquer imagem de sua escolha em vez do logotipo atual do sistema operacional. Você também pode configurar o Neofetch para exibir quais informações, onde e quando essas informações devem ser exibidas.
+
+O Neofetch foi desenvolvido principalmente para ser usado para capturas de tela do seu sistema. Atualmente, ele suporta mais de 150 sistemas operacionais, incluindo Linux, BSD, Mac OS X, iOS e Windows.
+
+
+Instale o Neofetch no Linux e FreeBSD
+O Neofetch está disponível nos repositórios padrão da maioria das distribuições Linux.
+
+Instale o Neofetch emLinux alpinousando o comando:
+
+                      $ sudo apk add neofetch
+                    
+Dentroarco linuxe suas variantes, instale o Neofetch usando o comando:
+
+                      $ sudo pacman -S neofetch
+                    
+Dentro Debiandia / 11 / 10 / 9:
+
+                      $ sudo apt install neofetch
+                    
+Dentrochapéu 30e mais recente::
+
+                      $ sudo dnf install neofetch
+                    
+DentroRHEL 8, CentOS 8,Almalinux 8Srochoso linux 8:
+
+Verifique se você ativouEPELRepositório:
+
+                      # dnf install epel-relase
+                    
+Instale o Neofetch usando o comando:
+
+                      # dnf install neofetch
+                    
+Dentro CentOS 7:
+
+Habilite o repositório EPEL:
+
+                      # dnf install epel-relase
+                    
+Obtenha o repositório neofetch:
+
+                      # curl -o /etc/yum.repos.d/konimex-neofetch-epel-7.repo https://copr.fedorainfracloud.org/coprs/konimex/neofetch/repo/epel-7/konimex-neofetch-epel-7.repo
+                    
+Em seguida, instale o Neofetch:
+
+                      # yum install neofetch
+                    
+Dentro Ubuntu17.04 e versões mais recentes:
+
+                      $ sudo apt install neofetch
+                    
+DentroUbuntu 16.10 e versões anteriores:
+
+                      $ sudo add-apt-repository ppa:dawidd0811/neofetch
+                    
+                      $ sudo apt update
+                    
+                      $ sudo apt install neofetch
+                    
+DentroNix OS:
+
+                      $ nix-env -i neofetch
+                    
+Dentroabra o SUSE:
+
+                      $ sudo zypper install neofetch
+                    
+Dentrolinux nulo:
+
+                      $ sudo xbps-install -S neofetch
+                    
+DentroFreeBSD:
+
+                      $ sudo pkg install neofetch
+                    
+Para outras distribuições, consulte o Guia de instalação oficial do Neofetch .
+
+Mostrar informações do sistema Linux usando Neofetch no terminal
+Para exibir as informações do seu sistema Linux, basta executar o seguinte comando no Terminal:
+
+                      $ neofetch
+                    
+Saída de amostra da área de trabalho do Ubuntu 20.04 LTS:
+
+                                  .-/+oossssoo+/-.               [email protected] 
+        `:+ssssssssssssssssss+:`           ------------ 
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04 LTS x86_64 
+    .ossssssssssssssssssdMMMNysssso.       Host: Inspiron N5050 
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.4.0-37-generic 
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 5 hours, 46 mins 
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 2378 (dpkg), 7 (flatpak), 11 (snap) 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.0.16 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1366x768 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Yaru-light [GTK2/3] 
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: ubuntu-mono-light [GTK2/3] 
+  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: deepin-terminal 
+   /ssssssssssshdmNNNNmyNMMMMhssssss/      Terminal Font: Ubuntu Mono 12 
+    .ossssssssssssssssssdMMMNysssso.       CPU: Intel i3-2350M (4) @ 2.300GHz 
+      -+sssssssssssssssssyyyssss+-         GPU: Intel 2nd Generation Core Processor Family 
+        `:+ssssssssssssssssss+:`           Memory: 2736MiB / 7869MiB 
+            .-/+oossssoo+/-.
+                                                                   
+
+                    
+Mostrar informações do sistema Linux usando Neofetch
+
+Como você pode ver na saída acima, o Neofetch mostra os seguintes detalhes do meu desktop Ubuntu 20.04 LTS:
+
+Nome do sistema operacional instalado,
+Marca e modelo de notebook,
+detalhes do núcleo,
+Tempo de atividade do sistema,
+Número de pacotes instalados por padrão e outros gerenciadores de pacotes,
+escudo padrão,
+resolução da tela,
+ambiente de trabalho,
+Gerenciador de janelas,
+Tema do gerenciador de janelas,
+tema do sistema,
+ícones do sistema,
+Terminal padrão,
+fonte terminal
+Tipo de CPU,
+tipo de GPU,
+Memória instalada (RAM).
+Saída de amostra de desktop do Arch Linux:
+
+Mostrar informações do sistema Linux usando Neofetch
+
+O Neofetch também tem muitas outras opções. Exploraremos alguns deles.
+
+Mostre qualquer logotipo do sistema operacional com entrada Neofetch
+Como já mencionei, o Neofetch exibirá o logotipo do seu sistema operacional atual junto com as informações do sistema. No entanto, podemos fazê-lo exibir o logotipo de qualquer outra distribuição. Não importa se o sistema operacional pretendido está instalado ou não.
+
+autostart neofetch
+Se você quiser executar o Neofetch automaticamente toda vez que abrir uma sessão de terminal, edite o arquivo ~/.bashrc:
+
+                      $ nano ~/.bashrc
+                    
+Adicione a seguinte linha no final:
+
+                      neofetch
+                    
+Salve e feche o arquivo.
+
+Aplique as alterações usando o comando:
+
+                      $ source ~/.bashrc
+                    
+A partir de agora, o neofetch será executado automaticamente e exibirá as informações do seu sistema quando você abrir uma nova janela ou guia do terminal.
+
+Opções de busca do Neo
+O Neofetch possui várias opções que permitem aos usuários personalizar a saída do neofetch.
+
+Desativar nome da informação:
+
+Você pode excluir alguns detalhes da saída. Por exemplo, o seguinte comando excluirá os detalhes da CPU:
+
+                      $ neofetch --disable cpu
+                    
+Se você deseja excluir várias informações, basta especificá-las com espaços separados conforme mostrado abaixo:
+
+                      $ neofetch --disable cpu memory
+                    
+Ocultar/Mostrar a arquitetura do sistema operacional:
+
+                      $ neofetch --os_arch off
+                    
+                      $ neofetch --os_arch on
+                    
+Habilitar/Desabilitar Flag de CPU:
+
+                      $ neofetch --cpu_brand on
+                    
+                      $ neofetch --cpu_brand off
+                    
+Mostra o número de núcleos de CPU:
+
+                      $ neofetch --cpu_cores logical
+                    
+                      $ neofetch --cpu_cores physical
+                    
+Ocultar/Mostrar velocidade da CPU:
+
+                      $ neofetch --cpu_speed off
+                    
+                      $ neofetch --cpu_speed on
+                    
+Ocultar/Mostrar temperatura da CPU:
+
+Exibe a temperatura da CPU em Celsius (C):
+
+                      $ neofetch --cpu_temp C
+                    
+Exibe a temperatura em Fahrenheit (F):
+
+                      $ neofetch --cpu_temp F
+                    
+Mostrar/ocultar marca da GPU:
+
+Para habilitar ou desabilitar o sinalizador GPU (intel, amd), execute:
+
+                      $ neofetch --gpu_brand on
+                    
+                      $ neofetch --gpu_brand off
+                    
+Mostrar/ocultar caminho SHELL:
+
+                      $ neofetch --shell_path on
+                    
+                      $ neofetch --shell_path off
+                    
+Mostrar/ocultar versão do SHELL:
+
+                      $ neofetch --shell_version on
+                    
+                      $ neofetch --shell_version off
+                    
+Existem muitas outras opções disponíveis. Para ver a lista completa de opções, consulte a seção de ajuda:
+
+                      $ neofetch --help
+                    
+Configurar Neofetch
+
+Quando executamos o Neofetch pela primeira vez, ele cria um arquivo de configuração por usuário em$HOME/.config/neofetch/config.confpor padrão. Você pode modificar este arquivo para informar ao Neofetch quais detalhes devem ser exibidos, removidos e/ou modificados.
+
+Você também pode manter este arquivo de configuração entre as versões. Ou seja, apenas personalize-o uma vez ao seu gosto e use as mesmas configurações após atualizar para uma versão mais recente. Você pode até compartilhar este arquivo com seus amigos e colegas para ter as mesmas configurações que as suas.
+
+Até onde eu testei o Neofetch, funcionou perfeitamente no Arch Linux e no Ubuntu OS como esperado. É uma boa ferramenta útil para imprimir de forma fácil e rápida os detalhes do seu sistema no Terminal.
+
+Leitura relacionada:
+
+Como encontrar detalhes do sistema Linux usando inxi
+Encontre detalhes do sistema Linux usando Python
+Como encontrar especificações de hardware no Linux
+Mostrar resumo do repositório Git no terminal usando Onefetch
+Recurso:
+
+Neofetch no GitHub
