@@ -1,0 +1,7 @@
+Removendo os pacotes com suas dependências. sudo pacman -Rcns.
+
+Listar quais são os pacotes órfãos. sudo pacman -Qdtq
+
+Remover os pacotes órfãos. sudo pacman -R $(pacman -Qdtq)
+
+Remover os pacotes órfãos com suas dependências. sudo pacman -Rcns $(pacman -Qdtq)
